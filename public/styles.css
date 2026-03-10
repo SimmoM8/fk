@@ -123,15 +123,26 @@ ol {
     min-height: 4.9rem;
 }
 
+.site-header__logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
 .site-header__logo img,
 .site-footer__logo img {
     width: 84px;
+    height: 84px;
     aspect-ratio: 3 / 1;
     object-fit: contain;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.12);
     padding: 0.5rem 0.9rem;
+}
+
+.fk-logo {
+    display: block;
+    width: 84px;
+    height: 84px;
 }
 
 .site-header__nav-list {
