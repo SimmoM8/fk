@@ -20,18 +20,29 @@
                     <li class="site-header__nav-item"><a href="#how-it-works">How It Works</a></li>
                     <li class="site-header__nav-item"><a href="#sizing-guide">Sizing Guide</a></li>
                     <li class="site-header__nav-item"><a href="#best-sellers">Shop</a></li>
-                    <li class="site-header__nav-item"><a href="#latest-updates">Learn</a></li>
+                    <li class="site-header__nav-item">
+                        <a href="#latest-updates">
+                            <i data-lucide="book-open" aria-hidden="true"></i>
+                            <span>Learn</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
 
             <div class="site-header__actions">
                 <div class="site-header__auth" aria-label="Account actions">
-                    <a href="#" class="site-header__login">Login</a>
-                    <a href="#" class="site-header__signup">Sign Up</a>
+                    <a href="#" class="site-header__login">
+                        <i data-lucide="log-in" aria-hidden="true"></i>
+                        <span>Login</span>
+                    </a>
+                    <a href="#" class="site-header__signup">
+                        <i data-lucide="user-plus" aria-hidden="true"></i>
+                        <span>Sign Up</span>
+                    </a>
                 </div>
 
                 <a href="#" class="site-header__cart" aria-label="Open cart">
-                    <img src="uploads/cart-icon.svg" alt="Cart">
+                    <i data-lucide="shopping-cart" aria-hidden="true"></i>
                 </a>
             </div>
         </div>
@@ -81,11 +92,11 @@
                     <div class="best-sellers__controls">
                         <button class="best-sellers__button best-sellers__button--prev" type="button"
                             aria-label="Previous products">
-                            ←
+                            <i data-lucide="chevron-left" aria-hidden="true"></i>
                         </button>
                         <button class="best-sellers__button best-sellers__button--next" type="button"
                             aria-label="Next products">
-                            →
+                            <i data-lucide="chevron-right" aria-hidden="true"></i>
                         </button>
                     </div>
                 </div>
@@ -183,7 +194,10 @@
                             We share straightforward guidance on sizing, safe use, and confidence in modern sexual
                             wellness.
                         </p>
-                        <a href="#" class="latest-updates__blog-button button button--secondary">Visit the blog</a>
+                        <a href="#" class="latest-updates__blog-button button button--secondary">
+                            <i data-lucide="newspaper" aria-hidden="true"></i>
+                            <span>Visit the blog</span>
+                        </a>
                     </div>
 
                     <a href="#" class="latest-updates__view-all">View all</a>
@@ -408,6 +422,12 @@
             </div>
         </div>
     </footer>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script>
+        if (window.lucide) {
+            window.lucide.createIcons();
+        }
+    </script>
     <script src="image-fallback.js"></script>
 </body>
 
