@@ -609,8 +609,15 @@ ol {
     isolation: isolate;
 }
 
-.image-wrapper img {
+.image-wrapper--auto-inline {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.image-wrapper--pending img {
     opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 .image-wrapper__fallback {
@@ -661,6 +668,7 @@ ol {
 .image-wrapper--ready img {
     opacity: 1;
     visibility: visible;
+    pointer-events: auto;
 }
 
 .product-card__image-link img,
