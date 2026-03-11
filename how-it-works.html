@@ -98,129 +98,171 @@
                 </div>
 
                 <ol class="process__timeline">
-                    <li class="process-step">
+                    <li class="process-step is-open" data-step="1">
                         <div class="process-step__number" aria-hidden="true">1</div>
                         <article class="process-step__content">
                             <h3 class="process-step__title">Find your condom size</h3>
                             <p class="process-step__text">
-                                Choose how you want to begin. If you already know your girth, FK can recommend a size
-                                immediately.
+                                Start by choosing the path that best matches you.
                             </p>
+                            <div class="process-step__body">
+                                <div class="process-path-options" role="group" aria-label="Choose your starting path">
+                                    <button type="button" class="button button--primary process-path-option"
+                                        data-select-path="know" aria-pressed="false">
+                                        I know my girth
+                                    </button>
+                                    <button type="button" class="button button--primary process-path-option"
+                                        data-select-path="unknown" aria-pressed="false">
+                                        I don't know my girth
+                                    </button>
+                                </div>
 
-                            <div class="process-step__actions">
-                                <a href="#" class="button button--primary process-step__option">I know my girth</a>
-                                <a href="#" class="button button--primary process-step__option">I don't know my
-                                    girth</a>
-                            </div>
+                                <p class="process-step__hint">Choose one option to reveal your next instructions.</p>
 
-                            <div class="process-step__details">
-                                <article class="process-step__detail">
-                                    <h4 class="process-step__detail-title">If you know your girth</h4>
-                                    <p>
-                                        Measure your girth in inches, remove the decimal, and use that two-digit number
-                                        as your FK size.
-                                        Example: 4.5 becomes 45.
-                                    </p>
-                                </article>
-                                <article class="process-step__detail">
-                                    <h4 class="process-step__detail-title">If you don't know your girth</h4>
-                                    <p>
-                                        You can still continue with the testing kit. Measuring first gives the most
-                                        accurate recommendation.
-                                    </p>
-                                </article>
-                            </div>
+                                <div class="process-path-panel" data-path-panel="know">
+                                    <article class="process-step__detail">
+                                        <h4 class="process-step__detail-title">If you know your girth</h4>
+                                        <ul class="process-step__list">
+                                            <li>Measure girth in inches.</li>
+                                            <li>Remove the decimal to get your FK size.</li>
+                                            <li>Example: 4.5 becomes 45.</li>
+                                        </ul>
+                                    </article>
+                                    <button type="button" class="process-path-switch" data-select-path="unknown">
+                                        Don't know your girth? Use the testing kit instead.
+                                    </button>
+                                </div>
 
-                            <div class="process-step__actions">
-                                <a href="#" class="button button--secondary">How FK sizing works</a>
+                                <div class="process-path-panel" data-path-panel="unknown">
+                                    <article class="process-step__detail">
+                                        <h4 class="process-step__detail-title">If you don't know your girth</h4>
+                                        <ul class="process-step__list">
+                                            <li>Start directly with the FK testing kit.</li>
+                                            <li>It helps you confirm your best fit quickly.</li>
+                                            <li>You can still measure later for extra accuracy.</li>
+                                        </ul>
+                                    </article>
+                                    <button type="button" class="process-path-switch" data-select-path="know">
+                                        Know your girth? Switch to the size-led path.
+                                    </button>
+                                </div>
+
+                                <div class="process-step__actions process-requires-path">
+                                    <a href="#" class="button button--secondary">How FK sizing works</a>
+                                    <button type="button" class="button button--secondary process-step__continue"
+                                        data-open-step="2">Continue to Step 2</button>
+                                </div>
                             </div>
                         </article>
                     </li>
 
-                    <li class="process-step">
+                    <li class="process-step is-locked" data-step="2">
                         <div class="process-step__number" aria-hidden="true">2</div>
                         <article class="process-step__content">
                             <h3 class="process-step__title">Order your FK testing kit</h3>
                             <p class="process-step__text">
-                                The testing kit helps you confirm your most comfortable, secure size before committing
-                                to full packs.
+                                Your kit is built to make size testing simple and accurate.
                             </p>
+                            <div class="process-step__body">
+                                <div class="process-path-panel" data-path-panel="know">
+                                    <article class="process-step__detail">
+                                        <h4 class="process-step__detail-title">Recommended-size testing kit</h4>
+                                        <ul class="process-step__list">
+                                            <li>Your recommended size</li>
+                                            <li>Two sizes smaller + two sizes larger</li>
+                                            <li>Custom measuring tape + FK water-based lube</li>
+                                            <li>Example for size 37: 33, 35, 37, 39, 41</li>
+                                        </ul>
+                                    </article>
+                                    <button type="button" class="process-path-switch" data-select-path="unknown">
+                                        Don't know your girth? See the standard testing path.
+                                    </button>
+                                </div>
 
-                            <div class="process-step__details">
-                                <article class="process-step__detail">
-                                    <h4 class="process-step__detail-title">If you know your size</h4>
-                                    <p>
-                                        Your kit includes your recommended size, two sizes smaller, and two sizes
-                                        larger, plus custom measuring tape and FK water-based lube.
-                                    </p>
-                                    <p>Example: if your size is 37, your kit includes 33, 35, 37, 39, 41.</p>
-                                </article>
-                                <article class="process-step__detail">
-                                    <h4 class="process-step__detail-title">If you don't know your size</h4>
-                                    <ul class="process-step__list">
-                                        <li>5 condoms covering a typical size range</li>
-                                        <li>Custom measuring tape</li>
-                                        <li>FK water-based lube</li>
-                                        <li>Convenient storage design</li>
-                                    </ul>
-                                </article>
-                            </div>
+                                <div class="process-path-panel" data-path-panel="unknown">
+                                    <article class="process-step__detail">
+                                        <h4 class="process-step__detail-title">Standard testing kit</h4>
+                                        <ul class="process-step__list">
+                                            <li>5 condoms covering a typical size range</li>
+                                            <li>Custom measuring tape</li>
+                                            <li>FK water-based lube</li>
+                                            <li>Convenient storage design</li>
+                                        </ul>
+                                    </article>
+                                    <button type="button" class="process-path-switch" data-select-path="know">
+                                        Know your girth? Switch to the size-led kit.
+                                    </button>
+                                </div>
 
-                            <div class="process-step__actions">
-                                <a href="#" class="button button--primary">Buy the testing kit</a>
-                                <a href="#" class="button button--secondary">Learn more about the testing kit</a>
+                                <div class="process-step__actions">
+                                    <a href="#" class="button button--primary">Buy the testing kit</a>
+                                    <a href="#" class="button button--secondary">Learn more about the testing kit</a>
+                                </div>
+                                <div class="process-step__actions">
+                                    <button type="button" class="button button--secondary process-step__continue"
+                                        data-open-step="3">Continue to Step 3</button>
+                                </div>
                             </div>
                         </article>
                     </li>
 
-                    <li class="process-step">
+                    <li class="process-step is-locked" data-step="3">
                         <div class="process-step__number" aria-hidden="true">3</div>
                         <article class="process-step__content">
                             <h3 class="process-step__title">Test the fit</h3>
                             <p class="process-step__text">
-                                Keep the process simple and consistent each time you test.
+                                Follow the same quick check each time.
                             </p>
+                            <div class="process-step__body">
+                                <ol class="process-step__list process-step__list--ordered">
+                                    <li>Get erect</li>
+                                    <li>Put on the condom</li>
+                                    <li>Check the fit</li>
+                                </ol>
 
-                            <ol class="process-step__list process-step__list--ordered">
-                                <li>Get erect</li>
-                                <li>Put on the condom</li>
-                                <li>Check the fit</li>
-                            </ol>
+                                <div class="process-step__details">
+                                    <article class="process-step__detail">
+                                        <h4 class="process-step__detail-title">Quick fit guidance</h4>
+                                        <ul class="process-step__list">
+                                            <li>Too tight: go up a size</li>
+                                            <li>Too loose: go down a size</li>
+                                            <li>Snug and secure: that's your size</li>
+                                        </ul>
+                                    </article>
+                                    <article class="process-step__detail">
+                                        <h4 class="process-step__detail-title">Quick check</h4>
+                                        <p>
+                                            Grip halfway up and gently pull. If it resists but does not slip off, the
+                                            size is correct.
+                                        </p>
+                                    </article>
+                                </div>
 
-                            <div class="process-step__details">
-                                <article class="process-step__detail">
-                                    <h4 class="process-step__detail-title">Quick fit guidance</h4>
-                                    <ul class="process-step__list">
-                                        <li>If it feels too tight: go up a size</li>
-                                        <li>If it feels too loose: go down a size</li>
-                                        <li>If it feels snug and secure: that's your size</li>
-                                    </ul>
-                                </article>
-                                <article class="process-step__detail">
-                                    <h4 class="process-step__detail-title">Quick check</h4>
-                                    <p>
-                                        Grip halfway up the penis and gently pull. If it resists but does not slip off,
-                                        the size is correct.
-                                    </p>
-                                </article>
-                            </div>
-
-                            <div class="process-step__actions">
-                                <a href="#" class="button button--secondary">How to put on a condom</a>
+                                <div class="process-step__actions">
+                                    <a href="#" class="button button--secondary">How to put on a condom</a>
+                                    <button type="button" class="button button--secondary process-step__continue"
+                                        data-open-step="4">Continue to Step 4</button>
+                                </div>
                             </div>
                         </article>
                     </li>
 
-                    <li class="process-step">
+                    <li class="process-step is-locked" data-step="4">
                         <div class="process-step__number" aria-hidden="true">4</div>
                         <article class="process-step__content">
                             <h3 class="process-step__title">Order with confidence</h3>
                             <p class="process-step__text">
-                                Once you've found your fit, buy your exact FK size directly and skip the guesswork from
-                                now on.
+                                Once your fit is confirmed, buying is easy and consistent every time.
                             </p>
-                            <div class="process-step__actions">
-                                <a href="#" class="button button--primary">Buy condoms</a>
+                            <div class="process-step__body">
+                                <ul class="process-step__list">
+                                    <li>Shop your confirmed FK size directly</li>
+                                    <li>Skip size guesswork from now on</li>
+                                    <li>Order discreetly with confidence</li>
+                                </ul>
+                                <div class="process-step__actions">
+                                    <a href="#" class="button button--primary">Buy condoms</a>
+                                </div>
                             </div>
                         </article>
                     </li>
@@ -323,6 +365,85 @@
         if (window.lucide) {
             window.lucide.createIcons();
         }
+    </script>
+    <script>
+        (function () {
+            var process = document.querySelector(".process");
+            if (!process) {
+                return;
+            }
+
+            var steps = Array.from(process.querySelectorAll(".process-step"));
+            var options = Array.from(process.querySelectorAll("[data-select-path]"));
+            var panels = Array.from(process.querySelectorAll("[data-path-panel]"));
+            var requiresPathBlocks = Array.from(process.querySelectorAll(".process-requires-path"));
+            var selectedPath = "";
+
+            function getStep(stepNumber) {
+                return process.querySelector('.process-step[data-step="' + stepNumber + '"]');
+            }
+
+            function unlockUntil(stepNumber) {
+                steps.forEach(function (step) {
+                    var current = Number(step.getAttribute("data-step"));
+                    if (current <= stepNumber) {
+                        step.classList.remove("is-locked");
+                    }
+                });
+            }
+
+            function openStep(stepNumber) {
+                var target = getStep(stepNumber);
+                if (!target || target.classList.contains("is-locked")) {
+                    return;
+                }
+
+                steps.forEach(function (step) {
+                    step.classList.remove("is-open");
+                });
+                target.classList.add("is-open");
+                target.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+
+            function setPath(path) {
+                selectedPath = path;
+                process.setAttribute("data-selected-path", path);
+
+                options.forEach(function (option) {
+                    var active = option.getAttribute("data-select-path") === path;
+                    option.classList.toggle("is-active", active);
+                    option.setAttribute("aria-pressed", active ? "true" : "false");
+                });
+
+                panels.forEach(function (panel) {
+                    var active = panel.getAttribute("data-path-panel") === path;
+                    panel.classList.toggle("is-active", active);
+                });
+
+                requiresPathBlocks.forEach(function (block) {
+                    block.classList.add("is-visible");
+                });
+
+                unlockUntil(2);
+            }
+
+            options.forEach(function (option) {
+                option.addEventListener("click", function () {
+                    setPath(option.getAttribute("data-select-path"));
+                });
+            });
+
+            process.querySelectorAll("[data-open-step]").forEach(function (control) {
+                control.addEventListener("click", function () {
+                    var targetStep = Number(control.getAttribute("data-open-step"));
+                    if (targetStep > 1 && !selectedPath) {
+                        return;
+                    }
+                    unlockUntil(targetStep);
+                    openStep(targetStep);
+                });
+            });
+        })();
     </script>
     <script src="public/image-fallback.js"></script>
 </body>

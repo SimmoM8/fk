@@ -686,6 +686,20 @@ ol {
     padding: 1.45rem;
 }
 
+.process-step.is-open .process-step__content {
+    border-color: rgba(255, 213, 90, 0.28);
+    box-shadow: 0 22px 36px rgba(0, 0, 0, 0.32);
+}
+
+.process-step.is-locked .process-step__number {
+    opacity: 0.62;
+    box-shadow: none;
+}
+
+.process-step.is-locked .process-step__content {
+    opacity: 0.58;
+}
+
 .process-step__content::before {
     content: "";
     position: absolute;
@@ -719,6 +733,23 @@ ol {
     max-width: 54ch;
 }
 
+.process-step__body {
+    margin-top: 0.95rem;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-0.3rem);
+    pointer-events: none;
+    transition: max-height 0.28s ease, opacity 0.25s ease, transform 0.25s ease;
+}
+
+.process-step.is-open .process-step__body {
+    max-height: 2200px;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
 .process-step__actions {
     margin-top: 1rem;
     display: flex;
@@ -730,6 +761,60 @@ ol {
     flex: 1 1 13.5rem;
     min-height: 3rem;
     font-size: 0.95rem;
+}
+
+.process-path-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.7rem;
+}
+
+.process-path-option {
+    width: 100%;
+}
+
+.process-path-option.is-active {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72), 0 22px 34px rgba(255, 213, 90, 0.34);
+}
+
+.process-step__hint {
+    margin-top: 0.8rem;
+    color: var(--text-soft);
+    font-size: 0.85rem;
+}
+
+.process-path-panel {
+    display: none;
+    margin-top: 0.95rem;
+}
+
+.process-path-panel.is-active {
+    display: block;
+}
+
+.process-path-switch {
+    margin-top: 0.7rem;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--accent-yellow);
+    font-size: 0.86rem;
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+    cursor: pointer;
+}
+
+.process-path-switch:hover,
+.process-path-switch:focus-visible {
+    color: #fff6d4;
+}
+
+.process-requires-path {
+    display: none;
+}
+
+.process-requires-path.is-visible {
+    display: flex;
 }
 
 .process-step__details {
@@ -1364,6 +1449,10 @@ ol {
         grid-template-columns: 1fr;
     }
 
+    .process-path-options {
+        grid-template-columns: 1fr;
+    }
+
     .how-it-works__steps,
     .best-sellers__track,
     .latest-updates__grid,
@@ -1457,6 +1546,10 @@ ol {
 
     .process-step__actions .button {
         width: 100%;
+    }
+
+    .process-path-switch {
+        font-size: 0.82rem;
     }
 
     .how-it-works__header,
