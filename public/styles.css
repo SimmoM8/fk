@@ -635,59 +635,88 @@ ol {
     margin-top: 2rem;
     position: relative;
     display: grid;
-    gap: 1rem;
+    gap: 1.7rem;
 }
 
 .process__timeline::before {
     content: "";
     position: absolute;
-    left: 1.45rem;
-    top: 0.9rem;
-    bottom: 0.9rem;
-    width: 1px;
-    background: linear-gradient(180deg, rgba(255, 213, 90, 0), rgba(255, 213, 90, 0.42), rgba(255, 95, 185, 0.38), rgba(255, 213, 90, 0));
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0.2rem;
+    bottom: 0.2rem;
+    width: 2px;
+    background: linear-gradient(180deg, rgba(255, 213, 90, 0), rgba(255, 213, 90, 0.48), rgba(255, 95, 185, 0.42), rgba(255, 213, 90, 0));
 }
 
 .process-step {
     position: relative;
     display: grid;
-    grid-template-columns: 2.9rem 1fr;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
     align-items: start;
-    gap: 1rem;
+    gap: 1.2rem;
 }
 
 .process-step__number {
-    width: 2.9rem;
-    height: 2.9rem;
+    grid-column: 2;
+    width: 3.5rem;
+    height: 3.5rem;
     border-radius: 999px;
     display: grid;
     place-items: center;
     color: #231d00;
-    font-size: 1.02rem;
+    font-size: 1.18rem;
     font-weight: 700;
-    border: 1px solid rgba(255, 213, 90, 0.35);
+    border: 1px solid rgba(255, 213, 90, 0.45);
     background: linear-gradient(140deg, #ffe6a3 0%, #ffd55a 65%, #ffb16d 100%);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 12px 24px rgba(255, 213, 90, 0.2);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.74), 0 16px 30px rgba(255, 213, 90, 0.24);
     z-index: 1;
 }
 
 .process-step__content {
+    position: relative;
+    grid-column: 3;
+    justify-self: start;
+    width: min(100%, 35rem);
     border-radius: var(--radius-lg);
     border: 1px solid var(--surface-stroke-soft);
     background: linear-gradient(160deg, rgba(31, 32, 43, 0.64), rgba(19, 20, 28, 0.52));
     backdrop-filter: blur(7px);
-    box-shadow: var(--shadow-sm);
-    padding: 1.35rem;
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.28);
+    padding: 1.45rem;
+}
+
+.process-step__content::before {
+    content: "";
+    position: absolute;
+    top: 1.7rem;
+    left: -2.3rem;
+    width: 2.3rem;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(255, 213, 90, 0.65), rgba(255, 213, 90, 0));
+}
+
+.process-step:nth-child(even) .process-step__content {
+    grid-column: 1;
+    justify-self: end;
+}
+
+.process-step:nth-child(even) .process-step__content::before {
+    left: auto;
+    right: -2.3rem;
+    background: linear-gradient(90deg, rgba(255, 213, 90, 0), rgba(255, 213, 90, 0.65));
 }
 
 .process-step__title {
-    font-size: 1.28rem;
+    font-size: 1.34rem;
     line-height: 1.25;
+    letter-spacing: -0.01em;
 }
 
 .process-step__text {
     margin-top: 0.65rem;
     color: var(--text-muted);
+    max-width: 54ch;
 }
 
 .process-step__actions {
@@ -698,11 +727,13 @@ ol {
 }
 
 .process-step__option {
-    min-width: 12rem;
+    flex: 1 1 13.5rem;
+    min-height: 3rem;
+    font-size: 0.95rem;
 }
 
 .process-step__details {
-    margin-top: 1rem;
+    margin-top: 1.15rem;
     display: grid;
     gap: 0.75rem;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -724,6 +755,7 @@ ol {
 .process-step__detail p {
     color: var(--text-muted);
     font-size: 0.92rem;
+    max-width: 60ch;
 }
 
 .process-step__detail p + p {
@@ -1390,6 +1422,7 @@ ol {
 
     .process__timeline::before {
         left: 1.35rem;
+        transform: none;
     }
 
     .process-step {
@@ -1398,8 +1431,24 @@ ol {
     }
 
     .process-step__number {
+        grid-column: 1;
         width: 2.7rem;
         height: 2.7rem;
+    }
+
+    .process-step__content,
+    .process-step:nth-child(even) .process-step__content {
+        grid-column: 2;
+        justify-self: stretch;
+        width: 100%;
+    }
+
+    .process-step__content::before,
+    .process-step:nth-child(even) .process-step__content::before {
+        left: -0.8rem;
+        right: auto;
+        width: 0.8rem;
+        background: linear-gradient(90deg, rgba(255, 213, 90, 0.6), rgba(255, 213, 90, 0));
     }
 
     .process-step__content {
