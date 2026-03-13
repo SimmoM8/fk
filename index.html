@@ -52,26 +52,25 @@
 
             <div class="site-header__actions">
                 <div class="site-header__auth" aria-label="Account actions">
-                    <a href="#" class="site-header__login">
-                        <i data-lucide="log-in" aria-hidden="true"></i>
-                        <span>Login</span>
-                    </a>
                     <a href="#" class="site-header__signup">
-                        <i data-lucide="user-plus" aria-hidden="true"></i>
-                        <span>Sign Up</span>
+                        <i data-lucide="circle-user" aria-hidden="true"></i>
+                        <span>Login</span>
                     </a>
                 </div>
                 <span class="site-header__actions-divider" aria-hidden="true"></span>
 
                 <a href="#" class="site-header__cart" aria-label="Open cart">
                     <i data-lucide="shopping-cart" aria-hidden="true"></i>
-                    <span>Cart</span>
+                    <span></span>
                 </a>
             </div>
         </div>
     </header>
 
+
+
     <main>
+        <!-- MAKE hero section carousel-->
         <section class="hero" aria-labelledby="hero-title">
             <div class="container">
                 <div class="hero__content">
@@ -92,15 +91,19 @@
                     <img src="public/uploads/hero-image.svg" alt="FK condom sizing and comfort guidance">
                 </div>
 
+                <!-- IDEA: Make a blog post for each highlight -->
                 <ul class="hero__highlights-banner" aria-label="FK value points">
-                    <li class="hero__highlight">Girth-based fit</li>
-                    <li class="hero__highlight">Secure comfort</li>
-                    <li class="hero__highlight">Discreet delivery</li>
-                    <li class="hero__highlight">Clear guidance</li>
+                    <li class="hero__highlight">Made for individuals</li>
+                    <li class="hero__highlight">Privacy focused</li>
+                    <li class="hero__highlight">Research driven</li>
+                    <li class="hero__highlight">Community first</li>
                 </ul>
             </div>
         </section>
 
+        <!-- SECTION: How it works and sizing guide. Somewhere here add a start your journey CTA-->
+
+        <!-- link best sellers to shop -->
         <section class="best-sellers" aria-labelledby="best-sellers-title">
             <div class="container">
                 <div class="best-sellers__header">
@@ -204,89 +207,6 @@
                         </article>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section class="latest-updates" aria-labelledby="latest-updates-title">
-            <div class="container">
-                <div class="latest-updates__header">
-                    <div class="latest-updates__intro">
-                        <p class="latest-updates__eyebrow">Education and updates</p>
-                        <h2 class="latest-updates__title">Guides, news, and practical advice</h2>
-                        <p class="latest-updates__text">
-                            Explore new articles, product updates, and educational resources from FK.
-                            We share straightforward guidance on sizing, safe use, and confidence in modern sexual
-                            wellness.
-                        </p>
-                    </div>
-
-                    <a href="#" class="latest-updates__view-all">View all</a>
-                </div>
-
-                <div class="latest-updates__grid">
-                    <article class="update-card">
-                        <a href="#" class="update-card__image-link image-wrapper">
-                            <img src="public/uploads/update-1.svg" alt="FK sizing guide article" class="update-card__image">
-                            <span class="image-wrapper__fallback" aria-hidden="true"></span>
-                        </a>
-
-                        <div class="update-card__content">
-                            <p class="update-card__category">Guide</p>
-                            <h3 class="update-card__title">
-                                <a href="#">How to measure girth and choose a better fit</a>
-                            </h3>
-                            <p class="update-card__description">
-                                A step-by-step guide to reducing sizing guesswork and improving comfort.
-                            </p>
-                            <a href="#" class="update-card__link">Read article</a>
-                        </div>
-                    </article>
-
-                    <article class="update-card">
-                        <a href="#" class="update-card__image-link image-wrapper">
-                            <img src="public/uploads/update-2.svg" alt="FK product launch news" class="update-card__image">
-                            <span class="image-wrapper__fallback" aria-hidden="true"></span>
-                        </a>
-
-                        <div class="update-card__content">
-                            <p class="update-card__category">News</p>
-                            <h3 class="update-card__title">
-                                <a href="#">New FK fit ranges built from customer feedback</a>
-                            </h3>
-                            <p class="update-card__description">
-                                See how we are improving sizing clarity and product comfort across the FK range.
-                            </p>
-                            <a href="#" class="update-card__link">Read update</a>
-                        </div>
-                    </article>
-
-                    <article class="update-card">
-                        <a href="#" class="update-card__image-link image-wrapper">
-                            <img src="public/uploads/update-3.svg" alt="FK sexual wellness blog post"
-                                class="update-card__image">
-                            <span class="image-wrapper__fallback" aria-hidden="true"></span>
-                        </a>
-
-                        <div class="update-card__content">
-                            <p class="update-card__category">Blog</p>
-                            <h3 class="update-card__title">
-                                <a href="#">Confidence and communication for safer intimacy</a>
-                            </h3>
-                            <p class="update-card__description">
-                                Practical ways to improve communication, comfort, and trust in intimate moments.
-                            </p>
-                            <a href="#" class="update-card__link">Read post</a>
-                        </div>
-                    </article>
-                </div>
-                <p class="latest-updates__text">We believe in keeping it real. Our blog is where we share the
-                    “why” behind FK, answer your questions, and give you tips for
-                    a safer, more enjoyable sex life
-                </p>
-                <a href="#" class="latest-updates__blog-button button button--secondary">
-                    <i data-lucide="newspaper" aria-hidden="true"></i>
-                    <span>Visit the blog</span>
-                </a>
             </div>
         </section>
 
@@ -398,7 +318,100 @@
                 </div>
             </div>
         </section>
+
+        <!-- SECTION: Social media posts / Latest updates -->
+
+         <!-- change this section to have 3 categories cards (1: static card directing to welcom to blog blog, 2: latest blog, 3: latest research) -->
+        <section class="latest-updates" aria-labelledby="latest-updates-title">
+            <div class="container">
+                <div class="latest-updates__header">
+                    <div class="latest-updates__intro">
+                        <p class="latest-updates__eyebrow">Education and updates</p>
+                        <h2 class="latest-updates__title">Guides, news, and practical advice</h2>
+                        <p class="latest-updates__text">
+                            Explore new articles, product updates, and educational resources from FK.
+                            We share straightforward guidance on sizing, safe use, and confidence in modern sexual
+                            wellness.
+                        </p>
+                    </div>
+
+                    <a href="#" class="latest-updates__view-all">View all</a>
+                </div>
+
+                <div class="latest-updates__grid">
+                    <article class="update-card">
+                        <a href="#" class="update-card__image-link image-wrapper">
+                            <img src="public/uploads/update-1.svg" alt="FK sizing guide article" class="update-card__image">
+                            <span class="image-wrapper__fallback" aria-hidden="true"></span>
+                        </a>
+
+                        <div class="update-card__content">
+                            <p class="update-card__category">Guide</p>
+                            <h3 class="update-card__title">
+                                <a href="#">How to measure girth and choose a better fit</a>
+                            </h3>
+                            <p class="update-card__description">
+                                A step-by-step guide to reducing sizing guesswork and improving comfort.
+                            </p>
+                            <a href="#" class="update-card__link">Read article</a>
+                        </div>
+                    </article>
+
+                    <article class="update-card">
+                        <a href="#" class="update-card__image-link image-wrapper">
+                            <img src="public/uploads/update-2.svg" alt="FK product launch news" class="update-card__image">
+                            <span class="image-wrapper__fallback" aria-hidden="true"></span>
+                        </a>
+
+                        <div class="update-card__content">
+                            <p class="update-card__category">News</p>
+                            <h3 class="update-card__title">
+                                <a href="#">New FK fit ranges built from customer feedback</a>
+                            </h3>
+                            <p class="update-card__description">
+                                See how we are improving sizing clarity and product comfort across the FK range.
+                            </p>
+                            <a href="#" class="update-card__link">Read update</a>
+                        </div>
+                    </article>
+
+                    <article class="update-card">
+                        <a href="#" class="update-card__image-link image-wrapper">
+                            <img src="public/uploads/update-3.svg" alt="FK sexual wellness blog post"
+                                class="update-card__image">
+                            <span class="image-wrapper__fallback" aria-hidden="true"></span>
+                        </a>
+
+                        <div class="update-card__content">
+                            <p class="update-card__category">Blog</p>
+                            <h3 class="update-card__title">
+                                <a href="#">Confidence and communication for safer intimacy</a>
+                            </h3>
+                            <p class="update-card__description">
+                                Practical ways to improve communication, comfort, and trust in intimate moments.
+                            </p>
+                            <a href="#" class="update-card__link">Read post</a>
+                        </div>
+                    </article>
+                </div>
+                <p class="latest-updates__text">We believe in keeping it real. Our blog is where we share the
+                    “why” behind FK, answer your questions, and give you tips for
+                    a safer, more enjoyable sex life
+                </p>
+                <a href="#" class="latest-updates__blog-button button button--secondary">
+                    <i data-lucide="newspaper" aria-hidden="true"></i>
+                    <span>Visit the blog</span>
+                </a>
+            </div>
+        </section>
+        
+        <!-- SECTION: CTA "Find your fit" and be FKing safe -->
+
     </main>
+
+
+
+
 
     <footer class="site-footer">
         <div class="container">

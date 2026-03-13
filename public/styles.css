@@ -13,7 +13,7 @@
     --accent-blue: #58b9ff;
     --accent-green: #72efcb;
     --ok: #86f2a4;
-    --radius-lg: 1.4rem;
+    --radius-lg: 0.4rem;
     --radius-md: 1rem;
     --radius-sm: 0.7rem;
     --shadow-lg: 0 26px 70px rgba(0, 0, 0, 0.5);
@@ -172,7 +172,7 @@ ol {
     gap: 0.5rem;
 }
 
-.site-header__nav-item > a {
+.site-header__nav-item>a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -193,8 +193,8 @@ ol {
     opacity: 0.86;
 }
 
-.site-header__nav-item > a:hover,
-.site-header__nav-item > a:focus-visible {
+.site-header__nav-item>a:hover,
+.site-header__nav-item>a:focus-visible {
     color: var(--text);
     background: rgba(255, 255, 255, 0.08);
     transform: translateY(-1px);
@@ -234,8 +234,8 @@ ol {
     height: 0.55rem;
 }
 
-.nav-item--dropdown:hover > .dropdown-menu,
-.nav-item--dropdown:focus-within > .dropdown-menu {
+.nav-item--dropdown:hover>.dropdown-menu,
+.nav-item--dropdown:focus-within>.dropdown-menu {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
